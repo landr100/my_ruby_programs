@@ -6,3 +6,20 @@ $ git commit -a -m "a note about your commit"
 $ git push
 The GitHub repository will show you the latest files that you have uploaded.
 
+exercise 2
+curl --manual # has docs about how to post and a suggestion to use formfind.pl
+curl http://sinatra2.hectorsq.com|formfind.pl
+# output gives a clue:
+--- FORM report. Uses POST to URL "/reverse"
+Input: NAME="str" VALUE="Type a string..." (TEXT)
+Button: ".. and reverse it!" (SUBMIT)
+--- end of FORM
+
+$ curl http://sinatra2.hectorsq.com/reverse -d "str=atest"
+# output: success!
+
+<h1>String Reverse Results</h1> 
+
+<p>You had entered the string - atest</p> 
+<p>The reversed string is     - tseta</p> 
+
