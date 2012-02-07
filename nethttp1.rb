@@ -1,10 +1,21 @@
+#!/usr/bin/env ruby
+
+STDOUT.sync = true # or could write to stderr
+
+$: << ENV['PWD'] # add pwd to the rubylib
+
+require 'count'
+
 # nethttp1.rb
 require 'net/http'
 
-url = URI.parse('http://rubylearning.com/data/text.txt')
+My_page = @chapter3
+
+url = URI.parse(My_page)
 Net::HTTP.start(url.host, url.port) do |http|
 	req = Net::HTTP::Get.new(url.path)
-	puts http.request(req).body
+	@my_body = http.request(req).body
 end
 
-# cd mydocs/development/ruby_training
+summarize(My_page, count(@my_body, 'the'))
+
