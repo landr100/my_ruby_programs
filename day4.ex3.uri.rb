@@ -11,7 +11,8 @@ $: << ENV['PWD'] # add pwd to rubylib
 require 'count'
 require 'net/http'
 
-uri = URI(@chapter3)
+My_page = @chapter3
+uri = URI(My_page)
 res = Net::HTTP.get_response(uri)
 puts res.code    # => '200'
 puts res.message # => 'OK'
@@ -20,5 +21,5 @@ puts res.message # => 'OK'
 
 num_the = count(Net::HTTP.get(uri), 'the')
 
-summarize()
+summarize(My_page, num_the)
 

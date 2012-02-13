@@ -1,18 +1,15 @@
 #!/usr/bin/env ruby
 
 STDOUT.sync = true # or could write to stderr
-
 $: << ENV['PWD'] # add pwd to the rubylib
 
-# netouri.rb
+# nethpcot.rb
 require 'open-uri'
+require 'hpricot'
 require 'count'
 
 My_page = @chapter3
-f = open(My_page)
-# puts f.readlines.join
+page = Hpricot(open(My_page))
+# puts "Page title is: " + page.at(:title).inner_html
 
-num_the = count(f.readlines.join, 'the')
-
-summarize(My_page, num_the)
 
