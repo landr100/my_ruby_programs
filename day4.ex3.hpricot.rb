@@ -10,6 +10,9 @@ require 'count'
 
 My_page = @chapter3
 page = Hpricot(open(My_page))
-# puts "Page title is: " + page.at(:title).inner_html
 
+@my_string = ''
+page.traverse_text_internal { |j| @my_string << j.to_s }
+
+summarize(My_page, count(@my_string, 'the'))
 
