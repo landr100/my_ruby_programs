@@ -1,9 +1,9 @@
 
 Note: From this point onwards, whenever you create a new program, or modify an existing program in the folder my_ruby_programs, open a Bash shell in that folder and type:
 
-$ git add .
-$ git commit -a -m "a note about your commit"
-$ git push
+git add .
+git commit -a -m "a note about your commit"
+git push
 The GitHub repository will show you the latest files that you have uploaded.
 
 exercise 2
