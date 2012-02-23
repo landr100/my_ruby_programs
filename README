@@ -23,3 +23,18 @@ $ curl http://sinatra2.hectorsq.com/reverse -d "str=atest"
 <p>You had entered the string - atest</p> 
 <p>The reversed string is     - tseta</p> 
 
+day 8 exercise 2 (or 3):
+
+syntax for my first heroku app:
+
+curl http://rbg-rackheroku.heroku.com/reverse?reverse='this is a new string with spaces'
+curl http://rbg-rackheroku.heroku.com/reverse?reverse='this%20is%20a%20new%20string%20with%20spacesaspercent20'
+
+from browser window:
+
+http://rbg-rackheroku.heroku.com/reverse?reverse=hi%20there
+
+reference: http://en.wikipedia.org/wiki/Uniform_Resource_Locator#Syntax
+
+note: deployed it without knowing this syntax above was required - but there is no other way to pass in the string (so far)
+
