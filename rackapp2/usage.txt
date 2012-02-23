@@ -1,0 +1,27 @@
+Usage:
+$ rackup upload.ru
+#
+
+File alpha.txt contains:
+zebra
+yen
+xmas
+birthday
+cat
+apple
+pune
+mumbai
+nashville
+
+Client:
+$ curl -F "info=@alpha.txt" localhost:9292
+Result:
+apple
+birthday
+cat
+mumbai
+nashville
+pune
+xmas
+yen
+zebra
