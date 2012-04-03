@@ -38,3 +38,6 @@ reference: http://en.wikipedia.org/wiki/Uniform_Resource_Locator#Syntax
 
 note: deployed it without knowing this syntax above was required - but there is no other way to pass in the string (so far)
 
+day 10 bonus:
+curl localhost:9292/show?symbol=goog # syntax was not obvious from formfind.pl
+

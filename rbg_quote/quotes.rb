@@ -13,7 +13,7 @@ class Stock
   attr_reader :row0, :row1, :row2, :row3, :row4, :row5, :row6, :row7
   private
     def is_invalid(symbol)
-      return symbol.match(/[\^\!@#\$&\*\(\)%\-_=\+]/)
+      return symbol.match(/[\^\!@#\$&\*\(\)%\-_=\+ :]/)
     end
 
   private
@@ -21,8 +21,14 @@ class Stock
     def get_info
       if is_invalid(@symbol)
         # TODO: How to log an error?
-	STDERR.puts "symbol .#{@symbol} invalid, skipping"
-	@row0 = @row1 = @row2 = @row3 = @row4 = @row5 = @row6 = @row7 = 'error'
+	msg = "symbol '#{@symbol}' invalid, skipping"
+	STDERR.puts msg
+	@row0 = msg
+	@row1 = 0.0
+	@row2 = 'the web'
+	@row3 = Time.now
+	@row4 = 0.0
+	@row5 = @row6 = @row7 = 'n/a'
 	return
       end
 
