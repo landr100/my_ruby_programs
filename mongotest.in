@@ -1,0 +1,6 @@
+use rubylearning
+db.students.insert({name: 'Satish', dob: new Date(1955,2,10,23,55), loves: ['ruby','java'], weight: 76, gender: 'm', country: 'india'});
+db.students.insert({name: 'Victor', dob: new Date(1960,4,11,13,55), loves: ['ruby','c++'], weight: 67, gender: 'm', country: 'usa'});
+db.students.insert({name: 'Michael', dob: new Date(1965,12,1,10,45), loves: ['ruby','clojure'], weight: 65, gender: 'm', country: 'austria'});
+db.students.insert({name: 'Satoshi', dob: new Date(1970,1,11,3,55), loves: ['ruby','c'], weight: 65, gender: 'm', country: 'japan'});
+db.students.insert({name: 'Sangeeta', dob: new Date(1965,3,11,2,15), loves: ['english','french'], weight: 60, gender: 'f', country: 'india'});
